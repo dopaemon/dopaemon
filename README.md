@@ -1,11 +1,6 @@
 # Hi there 👋 this is Nobi Nobita
 [![dopaemon github stats](https://github-readme-stats.vercel.app/api?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/dopaemon)
 
-## How's life
-- 📱 I make shiny rectangles run Linux
-- 💻 Currently working on LineageOS, Ubports and Mobian
-- 🩺 Struggling with medicine books
-
 ## What i know
 ![Linux](https://www.vectorlogo.zone/logos/linux/linux-icon.svg)
 ![GIT](https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg)
