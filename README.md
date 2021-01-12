@@ -6,9 +6,6 @@
 - 💻 Currently working on LineageOS, Ubports and Mobian
 - 🩺 Struggling with medicine books
 
-## What's the weather
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dopaemon&layout=compact&langs_count=10&theme=tokyonight)](https://github.com/dopaemon)
-
 ## What i know
 ![Linux](https://www.vectorlogo.zone/logos/linux/linux-icon.svg)
 ![GIT](https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg)
