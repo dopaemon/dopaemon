@@ -1,7 +1,10 @@
-# Hi there 👋 this is Nobi Nobita
-[![dopaemon github stats](https://github-readme-stats.vercel.app/api?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/dopaemon)
+# Hi các cậu. Tui là ```Trần Nguyễn Tuấn Anh```
+[![Guthub Của Tui Nè !!!](https://github-readme-stats.vercel.app/api?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/dopaemon)
 
-## What i know
+## Top Language Tui Dùng:
+[![Coi Nè !!!](https://github-readme-stats.vercel.app/api/top-langs/?username=dopaemon&layout=compact)](https://github.com/dopaemon)
+
+## Những Gì Mà Tui Biết:
 ![Linux](https://www.vectorlogo.zone/logos/linux/linux-icon.svg)
 ![GIT](https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg)
 <img src="https://github.com/isocpp/logos/raw/master/cpp_logo.svg" width="64">
@@ -11,5 +14,6 @@
 ![Docker](https://www.vectorlogo.zone/logos/docker/docker-icon.svg)
 ![CircleCI](https://www.vectorlogo.zone/logos/circleci/circleci-icon.svg)
 
-## How to reach me
+## Nếu Bạn Muốn Liên Lạc Với Tui:
 [<img src="https://www.vectorlogo.zone/logos/telegram/telegram-tile.svg" width="32">](http://t.me/kernelpanix)
+[<img src="https://www.vectorlogo.zone/logos/facebook/facebook-official.svg" width="32">](https://www.facebook.com/KernelPanix)
