@@ -1,9 +1,6 @@
 ## Hi các cậu. Tui là ```Trần Nguyễn Tuấn Anh```
 [![Github Của Tui Nè](https://github-readme-stats.vercel.app/api?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/dopaemon)
 
-## Top Language Tui Dùng:
-[![Coi Nè](https://github-readme-stats.vercel.app/api/top-langs/?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/KernelPanic-OpenSource)
-
 ## Những Gì Mà Tui Biết:
 ![Linux](https://www.vectorlogo.zone/logos/linux/linux-icon.svg)
 ![GIT](https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg)
