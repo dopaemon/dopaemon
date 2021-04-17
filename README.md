@@ -10,6 +10,12 @@
 ![PHP](https://www.vectorlogo.zone/logos/php/php-icon.svg)
 ![Docker](https://www.vectorlogo.zone/logos/docker/docker-icon.svg)
 ![CircleCI](https://www.vectorlogo.zone/logos/circleci/circleci-icon.svg)
+![Ubuntu](https://www.vectorlogo.zone/logos/ubuntu/ubuntu-icon.svg)
+![HTML](https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg)
+![CSS](https://www.vectorlogo.zone/logos/netlifyapp_watercss/netlifyapp_watercss-icon.svg)
+![JavaScript](https://www.vectorlogo.zone/logos/javascript/javascript-vertical.svg)
+![Github](https://www.vectorlogo.zone/logos/github/github-icon.svg)
+![Makefile](https://icon-icons.com/downloadimage.php?id=92756&root=1377/SVG/&file=textxmakefile_92756.svg)
 
 ## Nếu Bạn Muốn Liên Lạc Với Tui:
 [<img src="https://www.vectorlogo.zone/logos/telegram/telegram-tile.svg" width="32">](http://t.me/kernelpanix)
