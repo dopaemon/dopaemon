@@ -2,10 +2,7 @@
 [![Github Của Tui Nè](https://github-readme-stats.vercel.app/api?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/dopaemon)
 
 ## Top Ngôn Ngữ Tôi Dùng:
-<a href="https://github.com/dopaemon/github-readme-stats">
-  <!-- Change the `github-readme-stats.dopaemon.vercel.app` to `github-readme-stats.vercel.app`  -->
-  <img align="center" src="https://github-readme-stats.dopaemon.vercel.app/api/top-langs/?username=dopaemon&layout=compact&theme=material-palenight" />
-</a>
+[![Github Của Tui Nè](https://github-readme-stats.vercel.app/api/top-langs/?username=dopaemon&layout=compact&theme=tokyonight")](https://github.com/dopaemon)
 
 ## Những Gì Mà Tui Biết:
 ![Linux](https://www.vectorlogo.zone/logos/linux/linux-icon.svg)
