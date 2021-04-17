@@ -3,6 +3,9 @@
 
 ## Top Ngôn Ngữ Tôi Dùng:
 [![Github Của Tui Nè](https://github-readme-stats.vercel.app/api/top-langs/?username=dopaemon&layout=compact&theme=tokyonight")](https://github.com/dopaemon)
+<a href="https://github.com/MartinHeinz/MartinHeinz">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dopaemon&hide=java,html&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" />
+</a>
 
 ## Những Gì Mà Tui Biết:
 ![Linux](https://www.vectorlogo.zone/logos/linux/linux-icon.svg)
