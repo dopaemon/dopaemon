@@ -4,6 +4,9 @@
 ## Số Người Đã Xem:
 [![](https://el-psy-congroo-counter.glitch.me/count.svg)](https://glitch.com/~el-psy-congroo-counter)
 
+## Cúp:
+[![](https://github-profile-trophy.vercel.app/?username=dopaemon&theme=nord&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+
 ## Những Gì Mà Tui Biết:
 ![Linux](https://www.vectorlogo.zone/logos/linux/linux-icon.svg)
 ![GIT](https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg)
