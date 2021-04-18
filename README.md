@@ -32,7 +32,7 @@ int main()
 [![](https://github-readme-stats.vercel.app/api?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/dopaemon)
 
 ## Cúp Của Tui Nè:
-[![](https://github-profile-trophy.vercel.app/?username=KernelPanic-OpenSource&theme=nord&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+[![](https://github-profile-trophy.vercel.app/?username=dopaemon&theme=nord&column=7)](https://github.com/ryo-ma/github-profile-trophy)
 
 ## Các Ngôn Ngữ Lập Trình Tui Có Thể Biết:
 ```Language
