@@ -1,4 +1,4 @@
-# README.md - README.md - README.md - README.md - README.md - README.md
+# README.md - README.md - README.md - README.md
 ## Hi các cậu. Tui là ```Trần Nguyễn Tuấn Anh```
 ### Các Cậu Có Thể Thấy Các Dự Án Của Tui Ở Đây [```Kernel Panic Open Source```](http://github.com/KernelPanic-OpenSource)
 ```C++
