@@ -1,7 +1,6 @@
 # README.md - README.md - README.md - README.md
-## Hi các cậu. Tui là ```Trần Nguyễn Tuấn Anh```
-### Các Cậu Có Thể Thấy Các Dự Án Của Tui Ở Đây [```Kernel Panic Open Source```](http://github.com/KernelPanic-OpenSource)
-### Bây Giờ Tui Comback Android Builder Nha <3
+## Hi các cậu. mình là ```Trần Nguyễn Tuấn Anh```
+### Các Cậu Có Thể Thấy Các Dự Án Của mình Ở Đây [```Kernel Panic Open Source```](http://github.com/KernelPanic-OpenSource)
 ```C++
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -29,40 +28,32 @@ int main()
     return 0;
 }
 ```
-## Tui Đã Làm Được Gì Ở Github:
+## Mình Đã Làm Được Gì Ở Github:
 [![](https://github-readme-stats.vercel.app/api?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/dopaemon)
 
-## Cúp Của Tui Nè:
+## Cúp Của Mình Nè:
 [![](https://github-profile-trophy.vercel.app/?username=dopaemon&theme=nord&column=7)](https://github.com/ryo-ma/github-profile-trophy)
 
-## Các Ngôn Ngữ Lập Trình Tui Có Thể Biết:
+## Các Ngôn Ngữ Lập Trình Mình Có Thể Biết:
 ```Language
 - Python - C++ - C - PHP - CSS - HTML - JavaScript - Hack
 ```
 
-## Các Dự Án Mà Rất Có Thể Sẽ Gặp Tui:
+## Các Dự Án Mà Rất Có Thể Sẽ Gặp Mình:
 ```Project
 - UBPorts - UbPorts - Ubuntu Touch Cho Các Thiết Bị Xiaomi Có CPU Thuộc Series Snapdragon 660
-
-- Halium - Dự Án Này Tui Đã Xin Được Làm OFFICIAL Cho Xiaomi Redmi Note 5 Pro ( Whyred )
- 
+- Halium - Dự Án Này Mình Đã Xin Được Làm OFFICIAL Cho Xiaomi Redmi Note 5 Pro ( Whyred )
 - Kernel Doraemon - Kernel Này Được Tu Làm Ra Với Mục Đích Tăng Hiệu Năng Cho Whyred ( Snapdragon 636 )
-
 - Kernel Totoro - Dự Án Này Lập Ra Với Mục Đích Mang KVM Lên Các Thiết Bị Snapdragon 636 - Nhưng Nó Đã Thất Bại, Tạo Tiền Đề Phát Triển Cho Doraemon
-
 - Dự Án Khởi Nghiệp Cho Lớp T3K21 - Cao Đẳng Kinh Tế Kỹ Thuật Lâm Đồng - Cái Này Private À Nghe ^^
-
 - Dự Án Công Bố Mã Nguồn Cho Microsoft Windows XP - Windows Server 2K3 - Kernel NT5 - MS-DOS 6.0 - . . .
-
 - SailfishOS - Đây Là Dự Án Tương Lai Cũng Như Mục Tiêu Tôi Đề Ra
-
 - DoraemonOS - LotusOS - Tôi Sẽ Số Gắn Khôi Phục Cả 2 Cái Dự Án Này Thêm 1 Lần Nữa ( Chỉ 1 Trong 2 )
-
-- Một Vài Dự Án Nhỏ Tương Lai - Nếu Bất Kỳ Ai Muốn Liên Lạc Với Tui
-    + Inbox Facebook Tui ( Khuyên Dùng cái Này )
+- Một Vài Dự Án Nhỏ Tương Lai - Nếu Bất Kỳ Ai Muốn Liên Lạc Với Mình
+    + Inbox Facebook Mình ( Khuyên Dùng cái Này )
     + Inbox Telegram ( Dạo Này Đi Học Ít Có ONLINE Cái Này Được )
 ```
 
-## Nếu Bạn Muốn Liên Lạc Với Tui:
+## Nếu Bạn Muốn Liên Lạc Với Mình:
 [<img src="https://www.vectorlogo.zone/logos/telegram/telegram-tile.svg" width="32">](http://t.me/kernelpanix)
 [<img src="https://www.vectorlogo.zone/logos/facebook/facebook-official.svg" width="32">](https://www.facebook.com/KernelPanix)
