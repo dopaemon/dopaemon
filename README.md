@@ -1,6 +1,8 @@
 # README.md
-## Hi các cậu. mình là ```Trần Nguyễn Tuấn Anh```
-### Các Cậu Có Thể Thấy Các Dự Án Của mình Ở Đây [```Kernel Panic Open Source```](http://github.com/KernelPanic-OpenSource)
+## Hi. Tôi là ```Trần Nguyễn Tuấn Anh```
+
+<img align="center" width="100%" src="https://raw.githubusercontent.com/dopaemon/dopaemon/snake/github-contribution-grid-snake.svg" />
+
 ![svg](https://raw.githubusercontent.com/dopaemon/dopaemon/07b036fc965569846759539e9d4f81472576fbec/profile-3d-contrib/profile-night-view.svg)
 ```C++
 #include <bits/stdc++.h>
@@ -10,9 +12,9 @@ int main()
     return 0;
 }
 ```
-## Mình Đã Làm Được Gì Ở Github:
+## Tôi Đã Làm Được Gì Ở Github:
 [![](https://github-readme-stats.vercel.app/api?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/dopaemon)
 
-## Nếu Bạn Muốn Liên Lạc Với Mình:
+## Nếu Bạn Muốn Liên Lạc Với Tôi:
 [<img src="https://www.vectorlogo.zone/logos/telegram/telegram-tile.svg" width="32">](http://t.me/kernelpanix)
 [<img src="https://www.vectorlogo.zone/logos/facebook/facebook-official.svg" width="32">](https://www.facebook.com/KernelPanix)
