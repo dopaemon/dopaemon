@@ -31,4 +31,4 @@ jobs:
           git add -A .
           git commit -m "generated"
           git checkout -b output
-          git push -u origin output
+          git push -uf origin output
