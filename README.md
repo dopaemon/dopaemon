@@ -17,4 +17,3 @@ int main()
 
 ## Nếu Bạn Muốn Liên Lạc Với Tôi:
 [<img src="https://www.vectorlogo.zone/logos/telegram/telegram-tile.svg" width="32">](http://t.me/kernelpanix)
-[<img src="https://www.vectorlogo.zone/logos/facebook/facebook-official.svg" width="32">](https://www.facebook.com/KernelPanix)
