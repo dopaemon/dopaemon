@@ -1,0 +1,51 @@
+// Example program
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+const int MAX = 1000;
+
+int a[MAX][MAX];
+int b[MAX];
+
+void LietKe(int cot) {
+    int hang = cot * cot;
+    for(int i = 0; i < hang; i++) {
+        for (int j = 0; j < cot; j++) {
+            a[i][j] = (i >> j) & 1;
+        }
+    }
+}
+
+void XuatKQ(int cot) {
+    int hang = cot * cot;
+    
+    for (int i = 0; i < cot; i++) {
+        b[i] = i + 1;
+    }
+    
+    for (int i = 0; i < hang; i++) {
+        for (int j = 0; j < cot; j++) {
+            cout << a[i][j] << " ";
+            for (int k = 0; k < cot; k++) {
+                if (a[i][k] == 1) {
+                    cout << "| " << k + 1;
+                }
+            }
+            
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int count = 4;
+    
+    LietKe(count);
+    
+    XuatKQ(count);
+    
+    return 0;
+}
