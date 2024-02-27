@@ -27,12 +27,11 @@ void XuatKQ(int cot) {
     
     for (int i = 0; i < hang; i++) {
         for (int j = 0; j < cot; j++) {
-            cout << a[i][j] << " ";
-            for (int k = 0; k < cot; k++) {
-                if (a[i][k] == 1) {
-                    cout << "| " << k + 1;
+
+                if (a[i][j] == 1) {
+                    cout << "| " << j + 1;
                 }
-            }
+
             
         }
         cout << endl;
