@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Devices list
+DEVICES=("mayfly" "unicorn" "cupid" "zeus" "diting")
+
 # Build
 . build/envsetup.sh
 mkdir -p "$HOME/out"
