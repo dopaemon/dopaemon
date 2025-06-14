@@ -25,6 +25,7 @@ for DEVICE in "${DEVICES[@]}"; do
 	ota_file=$(find "out/target/product/$DEVICE" -name "RisingOS_Revived-*-${DEVICE}-ota.zip" 2>/dev/null)
 	if [[ -f "$ota_file" ]]; then
 		mv "$ota_file" ../out/
+                cp -r out/target/product/$DEVICE/$DEVICE.json ../out/
 	else
 		echo "❌ OTA zip not found for $DEVICE"
 	fi
