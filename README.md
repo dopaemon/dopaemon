@@ -27,7 +27,7 @@ func main() {
 
 ## Top Ngôn Ngữ Được Sử Dụng (Không chính xác):
 <p align="center">
-  <img src="https://raw.githubusercontent.com/dopaemon/dopaemon/07b036fc965569846759539e9d4f81472576fbec/profile-3d-contrib/profile-night-view.svg" alt="3d-contrib" />
+  <img src="https://github.com/dopaemon/dopaemon/raw/output/profile-3d-contrib/profile-night-view.svg" alt="3d-contrib" />
 </p>
 
 ## Nếu Bạn Muốn Liên Lạc Với Tôi:
