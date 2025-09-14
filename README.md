@@ -18,17 +18,22 @@ func main() {
     fmt.Println(say)
 }
 ```
-## Tôi Đã Làm Được Gì Ở Github:
 <p align="center">
-    <a href="https://github.com/dopaemon"> <img src="https://github-readme-stats.vercel.app/api?username=dopaemon&show_icons=true&include_all_commits=true&theme=tokyonight" alt="stats"/>
-    </a>
+    <a href="https://github.com/dopaemon">
+        <img src="https://github-readme-stats.vercel.app/api?username=dopaemon&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" alt="stats" width="500"/>
+    </a><br>
+    <a href="https://github.com/dopaemon">
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=dopaemon&theme=tokyonight&hide_border=true" alt="stats" width="500"/>
+    </a><br>
+    <a href="https://github.com/dopaemon">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dopaemon&theme=tokyonight&show_icons=true&hide_border=true&layout=compact" alt="stats" width="500"/>
+    </a><br>
 </p>
 
 
-## Top Ngôn Ngữ Được Sử Dụng (Không chính xác):
-<p align="center">
+<!-- <p align="center">
   <img src="https://github.com/dopaemon/dopaemon/raw/output/profile-3d-contrib/profile-night-view.svg" alt="3d-contrib" />
-</p>
+</p> -->
 
 ## Nếu Bạn Muốn Liên Lạc Với Tôi:
 [<img src="https://www.vectorlogo.zone/logos/telegram/telegram-tile.svg" width="32">](http://t.me/kernelpanix)
