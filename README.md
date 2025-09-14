@@ -31,9 +31,12 @@ func main() {
 </p>
 
 
-<!-- <p align="center">
-  <img src="https://github.com/dopaemon/dopaemon/raw/output/profile-3d-contrib/profile-night-view.svg" alt="3d-contrib" />
-</p> -->
+<p align="center">
+    <!-- <img src="https://github.com/dopaemon/dopaemon/raw/output/profile-3d-contrib/profile-night-view.svg" alt="3d-contrib" /> -->
+    <a href="https://github.com/dopaemon">
+        <img src="https://github-profile-trophy.vercel.app/?username=dopaemon&theme=radical" alt="stats"/>
+    </a>
+</p>
 
 ## Nếu Bạn Muốn Liên Lạc Với Tôi:
 [<img src="https://www.vectorlogo.zone/logos/telegram/telegram-tile.svg" width="32">](http://t.me/kernelpanix)
