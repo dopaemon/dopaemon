@@ -240,3 +240,81 @@ Tổng thể, thành quả hiện tại đáp ứng tốt mục tiêu kỹ thu�
 3. Lề chuẩn A4 (trên 2 cm, dưới 2 cm, trái 3 cm, phải 2 cm).
 4. Giữ nguyên các mục chính từ 1 đến 7.
 5. Nếu cần rút ngắn thêm, giảm phần 5.2 xuống dạng bullet ngắn.
+
+• Bộ prompt khởi tạo dự án này (từ 0 → chạy được):
+
+  1. Thiết kế kiến trúc monorepo cho hệ thống quản trị kiểu X-UI gồm React frontend, FastAPI backend, Go bridge, nginx reverse proxy. Trả về cây thư mục + trách nhiệm từng service.
+
+  - Mục tiêu: khung tổng thể.
+
+  2. Scaffold backend FastAPI cho ProgenUI: auth JWT, CRUD inbounds/clients, SQLite với SQLAlchemy, schema Pydantic, CORS, health endpoint.
+
+  - Mục tiêu: API lõi.
+
+  3. Thiết kế models SQLAlchemy cho Admin, Inbound, Client, TrafficSample, SystemSetting; thêm quan hệ inbound-clients và unique constraints hợp lý.
+
+  - Mục tiêu: data model chuẩn.
+
+  4. Viết schemas Pydantic cho login/refresh, inbound/client create-update-read, dashboard summary, traffic point; thêm validator protocol/port/email/uuid/settings_json.
+
+  - Mục tiêu: validation tầng API.
+
+  5. Implement auth.py: hash password bằng passlib+bcrypt, create/decode JWT access+refresh bằng python-jose, check token type.
+
+  - Mục tiêu: bảo mật cơ bản.
+
+  6. Implement dependency get_current_admin cho FastAPI từ Authorization Bearer token, trả 401 cho các case lỗi.
+
+  - Mục tiêu: guard endpoint private.
+
+  7. Tạo bridge client Python dùng grpcio aio, gọi unary_unary theo method path, serialize/deserialize JSON payload bytes.
+
+  - Mục tiêu: backend ↔ bridge.
+
+  8. Viết services.py: ensure_default_admin, build_dashboard_summary, build_traffic_history, persist_stats_snapshot từ cumulative bytes sang delta bytes.
+
+  - Mục tiêu: business logic chính.
+
+  9. Tạo background poller FastAPI: mỗi 30s gọi bridge list_client_stats, persist snapshot, broadcast websocket dashboard; không để task chết khi lỗi.
+
+  - Mục tiêu: realtime metrics pipeline.
+
+  10. Viết websocket /ws/dashboard với connection manager (connect/disconnect/broadcast), gửi snapshot ban đầu khi client connect.
+
+  - Mục tiêu: realtime UI.
+
+  11. Scaffold Go bridge service (gRPC) với các method: GetRuntimeStatus, GetRuntimeConfig, ListClientStats, ApplyInbound, RemoveInbound, RemoveClient; có mode stub khi không có Xray.
+
+  - Mục tiêu: runtime adaptor.
+
+  12. Viết frontend React dashboard: login, token refresh, pages dashboard/inbounds/clients, gọi REST backend, mở websocket nhận dashboard event.
+
+  - Mục tiêu: UI vận hành.
+
+  13. Viết trang Inbounds UI: list/create/update/delete, form protocol/transport/security/settings_json, validate input, hiển thị lỗi API thân thiện.
+
+  - Mục tiêu: quản trị inbound.
+
+  14. Viết trang Clients UI: list/create/update/delete, generate share link theo protocol (vless/trojan/vmess), copy/share/QR.
+
+  - Mục tiêu: quản trị client.
+
+  15. Tạo docker-compose cho frontend/backend/bridge/nginx + volume dữ liệu SQLite, healthcheck cơ bản, networking nội bộ.
+
+  - Mục tiêu: chạy local 1 lệnh.
+
+  16. Viết pytest cho backend: login, duplicate inbound port, unknown inbound client create, delete inbound có clients, duplicate email update, sync_all_inbounds payload, persist_stats_snapshot delta.
+
+  - Mục tiêu: khóa logic quan trọng.
+
+  17. Mở rộng protocol từ vless/trojan sang vmess/http: cập nhật validator backend, UI options frontend, tests tương ứng, giữ backward compatibility.
+
+  - Mục tiêu: nâng cấp tính năng.
+
+  18. Review production gaps của hệ thống này theo P0/P1/P2: auth hardening, migrations, observability, retention, backup/restore.
+
+  - Mục tiêu: roadmap nâng cấp.
+
+  Template prompt chuẩn (dùng lại):
+  [Vai trò] + [Mục tiêu cụ thể] + [Phạm vi file] + [Ràng buộc] + [Output format] + [Test cần pass].
+
