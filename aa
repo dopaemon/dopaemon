@@ -1,0 +1,242 @@
+# BÁO CÁO SẢN PHẨM ỨNG DỤNG PROGENUI (TRỌNG TÂM PYTHON)
+
+**Mục đích báo cáo:** Mô tả sản phẩm đã xây dựng, quá trình thực hiện, kết quả đạt được, và mức độ sử dụng AI trong quá trình phát triển.  
+**Giới hạn:** Tối đa 10 trang Word (nội dung dưới đây được biên soạn để phù hợp giới hạn này sau khi dàn trang chuẩn A4).  
+**Trọng tâm:** Backend Python và thành quả làm việc của sinh viên.
+
+---
+
+## 1. Thông tin chung về sản phẩm
+
+### 1.1 Tên sản phẩm
+**ProgenUI** - Hệ thống quản trị dịch vụ mạng theo mô hình dashboard web, lấy cảm hứng từ X-UI.
+
+### 1.2 Mục tiêu sản phẩm
+Sản phẩm được xây dựng nhằm:
+1. Cung cấp giao diện quản trị tập trung cho cấu hình inbound/client.
+2. Theo dõi trạng thái runtime hệ thống và lưu lượng truy cập theo thời gian.
+3. Đồng bộ trạng thái giữa dữ liệu cấu hình và tiến trình runtime.
+4. Đảm bảo vận hành thuận tiện cho người quản trị thông qua API + giao diện dashboard.
+
+### 1.3 Kiến trúc tổng quan
+Hệ thống gồm các thành phần:
+1. **Frontend (React):** giao diện quản trị.
+2. **Backend (Python FastAPI):** xử lý nghiệp vụ, xác thực, persistence, realtime.
+3. **Bridge (Go + gRPC):** giao tiếp với runtime Xray.
+4. **Nginx:** reverse proxy.
+
+Trong đó, **backend Python** là thành phần trung tâm điều phối dữ liệu và nghiệp vụ.
+
+---
+
+## 2. Phạm vi công việc sinh viên thực hiện (trọng tâm Python)
+
+Các hạng mục chính sinh viên đã triển khai/hoàn thiện trong phần Python:
+
+1. Thiết kế API backend với FastAPI.
+2. Xây dựng mô hình dữ liệu bằng SQLAlchemy (Admin, Inbound, Client, TrafficSample, SystemSetting).
+3. Xây dựng hệ thống schema/validation bằng Pydantic.
+4. Hoàn thiện xác thực JWT + hash mật khẩu bcrypt.
+5. Tích hợp client gRPC để backend gọi bridge.
+6. Cài đặt cơ chế poll định kỳ lấy thống kê traffic từ bridge.
+7. Cài đặt WebSocket để cập nhật dashboard realtime.
+8. Cài đặt các rule nghiệp vụ: unique, kiểm tra tồn tại, rollback khi lỗi.
+9. Viết test tự động bằng pytest cho API logic và service logic.
+10. Mở rộng hỗ trợ protocol từ bộ cũ sang thêm `vmess` và `http`.
+
+---
+
+## 3. Mô tả chi tiết phần Python
+
+## 3.1 Stack công nghệ Python đã sử dụng
+
+1. **FastAPI:** xây dựng REST API và WebSocket.
+2. **Uvicorn:** chạy ASGI server.
+3. **SQLAlchemy 2.x:** ORM và truy vấn CSDL.
+4. **Pydantic + pydantic-settings:** validation và quản lý cấu hình từ môi trường.
+5. **python-jose:** tạo/xác minh JWT.
+6. **passlib + bcrypt:** hash/verify mật khẩu.
+7. **grpcio:** giao tiếp backend -> bridge qua gRPC.
+8. **pytest:** kiểm thử tự động.
+
+### Lý do chọn stack
+- Phù hợp với bài toán API hiện đại, có realtime, có xác thực.
+- Tối ưu tốc độ phát triển nhưng vẫn giữ tính rõ ràng, dễ bảo trì.
+- Cân bằng giữa tính học thuật (kiến trúc rõ lớp) và tính ứng dụng thực tế.
+
+## 3.2 Cấu trúc module backend Python
+
+1. `config.py`: cấu hình hệ thống.
+2. `database.py`: engine/session DB.
+3. `models.py`: mô hình ORM.
+4. `schemas.py`: schema request/response + validator.
+5. `auth.py`: JWT + password hashing.
+6. `deps.py`: dependency xác thực admin.
+7. `bridge.py`: gRPC client gọi bridge service.
+8. `services.py`: business logic (dashboard summary, traffic snapshot, seed admin).
+9. `main.py`: entrypoint ứng dụng, định nghĩa route, websocket, poller nền.
+
+## 3.3 Luồng nghiệp vụ chính
+
+### 3.3.1 Luồng đăng nhập
+1. Nhận username/password từ frontend.
+2. Kiểm tra tài khoản admin trong DB.
+3. Verify mật khẩu đã hash.
+4. Trả access token + refresh token.
+
+### 3.3.2 Luồng quản lý inbound/client
+1. Validate dữ liệu đầu vào bằng Pydantic.
+2. Kiểm tra rule nghiệp vụ (trùng port, trùng email/uuid...).
+3. Ghi DB.
+4. Đồng bộ runtime bằng call gRPC sang bridge (`apply_inbound`, `remove_inbound`, `remove_client`).
+
+### 3.3.3 Luồng thống kê traffic và realtime dashboard
+1. Poller chạy nền theo chu kỳ.
+2. Gọi bridge lấy cumulative traffic theo client.
+3. Tính delta so với lần trước và lưu vào `traffic_samples`.
+4. Tính summary/history dashboard.
+5. Broadcast qua WebSocket cho frontend.
+
+---
+
+## 4. Thành quả sản phẩm đạt được
+
+## 4.1 Kết quả chức năng
+
+Sản phẩm đã đạt các chức năng cốt lõi:
+1. Đăng nhập/refresh token hoạt động ổn định.
+2. CRUD inbound/client hoạt động đầy đủ.
+3. Đồng bộ DB -> runtime thông qua bridge.
+4. Dashboard có số liệu traffic và trạng thái runtime.
+5. Realtime dashboard qua WebSocket.
+6. Có unit/integration-like tests ở mức logic.
+
+## 4.2 Kết quả kỹ thuật
+
+1. Kiến trúc backend rõ module, tách lớp tốt.
+2. Validation dữ liệu đầu vào đầy đủ, giảm lỗi runtime.
+3. Rule lỗi HTTP chuẩn (`401`, `404`, `409`) rõ ràng.
+4. Có cơ chế rollback khi commit lỗi ràng buộc DB.
+5. Có seed admin mặc định khi startup.
+6. Có cơ chế sync lại inbound khi khởi động dịch vụ.
+
+## 4.3 Thành quả nổi bật của sinh viên
+
+1. Tự xây dựng hoàn chỉnh flow backend có xác thực + realtime.
+2. Giải quyết bài toán đồng bộ cấu hình và runtime bridge.
+3. Xử lý đúng bài toán traffic theo **delta** thay vì cumulative (phù hợp biểu đồ thời gian).
+4. Viết test để khóa hành vi nghiệp vụ quan trọng.
+5. Mở rộng hệ thống hỗ trợ thêm protocol (`vmess`, `http`) mà không phá vỡ luồng cũ.
+
+---
+
+## 5. Báo cáo mức độ sử dụng AI (hạn chế, tập trung hàm phức tạp)
+
+Theo yêu cầu dự án, AI chỉ được dùng tối thiểu, chủ yếu cho các hàm/đoạn khó.  
+Dưới đây là các nhóm prompt tiêu biểu đã dùng, theo hướng **tham khảo kỹ thuật**, không thay thế toàn bộ quá trình lập trình của sinh viên.
+
+## 5.1 Nguyên tắc sử dụng AI
+
+1. Chỉ dùng AI khi gặp đoạn logic khó hoặc cần rà soát nhanh.
+2. Không copy nguyên khối không kiểm chứng.
+3. Mọi gợi ý AI đều được sinh viên đọc lại, chỉnh sửa, và test thực tế.
+4. Đa số phần CRUD chuẩn, cấu trúc file, naming convention do sinh viên tự triển khai.
+
+## 5.2 Các trường hợp dùng prompt (mức phức tạp)
+
+### Trường hợp A - Logic tính delta traffic
+**Mục tiêu:** Chuyển cumulative bytes thành delta bytes mỗi chu kỳ poll.  
+**Lý do cần AI:** Đây là logic dễ sai khi xuất hiện reset counter hoặc chênh lệch tỉ lệ uplink/downlink.
+
+**Prompt dạng rút gọn đã dùng:**
+> "Thiết kế thuật toán tính delta traffic từ cumulative counters cho nhiều client, tránh số âm, tách uplink/downlink theo tỉ lệ, lưu snapshot theo timestamp."
+
+**Kết quả áp dụng:**
+- Đã triển khai `persist_stats_snapshot` trong `services.py`.
+- Đảm bảo `delta_total = max(0, current - previous)`.
+- Có test xác nhận đầu ra mong muốn.
+
+### Trường hợp B - Thiết kế poller nền + broadcast realtime
+**Mục tiêu:** Poll định kỳ bridge, lưu DB, push websocket.
+**Lý do cần AI:** Cần phối hợp async loop + DB session lifecycle + websocket broadcast.
+
+**Prompt dạng rút gọn đã dùng:**
+> "Gợi ý cấu trúc background async poller trong FastAPI có xử lý lỗi, đóng session an toàn, và broadcast cho nhiều websocket clients."
+
+**Kết quả áp dụng:**
+- Hoàn thiện `poll_bridge_stats_forever`.
+- Có xử lý exception để task không chết hẳn.
+- Broadcast dashboard event tới client.
+
+### Trường hợp C - Rule validate protocol mở rộng
+**Mục tiêu:** Thêm hỗ trợ `vmess` và `http`.
+**Lý do cần AI:** Cần rà nhanh phạm vi tác động backend/frontend.
+
+**Prompt dạng rút gọn đã dùng:**
+> "Xác định các điểm cần sửa khi mở rộng protocol từ vless/trojan sang vmess/http trong FastAPI + UI."
+
+**Kết quả áp dụng:**
+- Cập nhật validator protocol trong schema backend.
+- Cập nhật option UI.
+- Bổ sung test tạo inbound với protocol mới.
+
+## 5.3 Đánh giá mức lệ thuộc AI
+
+- Mức lệ thuộc: **thấp**.
+- AI chủ yếu hỗ trợ:
+  1. Gợi ý thiết kế cho hàm khó.
+  2. Checklist điểm cần sửa khi mở rộng chức năng.
+  3. Rà soát nhanh rủi ro logic.
+- Phần triển khai chính (kiến trúc module, route, schema, CRUD, test, tích hợp) do sinh viên chủ động thực hiện.
+
+---
+
+## 6. Đánh giá chất lượng sản phẩm hiện tại
+
+## 6.1 Điểm mạnh
+
+1. Kiến trúc backend rõ ràng, dễ đọc.
+2. Luồng nghiệp vụ chính hoạt động đầy đủ.
+3. Có test tự động cho logic quan trọng.
+4. Có realtime update dashboard.
+5. Có khả năng mở rộng protocol và nghiệp vụ tiếp theo.
+
+## 6.2 Hạn chế còn tồn tại
+
+1. Chưa có migration versioning chuyên nghiệp (Alembic).
+2. Chưa có hệ thống revoke refresh token.
+3. Chưa có audit log đầy đủ theo người dùng thao tác.
+4. Chưa có observability production-grade (metrics/tracing/alerts).
+5. Chưa có chính sách retention dữ liệu `traffic_samples` dài hạn.
+
+## 6.3 Định hướng nâng cấp
+
+1. Bổ sung Alembic migration.
+2. Hardening auth (rate limit login, rotate/revoke refresh token).
+3. Bổ sung Prometheus metrics + dashboard giám sát.
+4. Hoàn thiện full semantic cho protocol mới (`vmess/http`) trong toàn bộ luồng share/config.
+5. Mở rộng test E2E theo môi trường docker compose.
+
+---
+
+## 7. Kết luận
+
+Với trọng tâm Python, sản phẩm ProgenUI đã đạt mức hoàn thiện tốt cho một đồ án/đề tài theo hướng ứng dụng thực tế:
+
+1. Backend đã có đầy đủ các lớp quan trọng: auth, data model, API CRUD, tích hợp service ngoài, realtime.
+2. Luồng nghiệp vụ chính vận hành ổn định, có kiểm thử đi kèm.
+3. Sinh viên thể hiện năng lực triển khai hệ thống có cấu trúc, không chỉ dừng ở mức API cơ bản.
+4. Việc sử dụng AI được kiểm soát ở mức hỗ trợ các phần phức tạp, không thay thế năng lực cốt lõi của người thực hiện.
+
+Tổng thể, thành quả hiện tại đáp ứng tốt mục tiêu kỹ thuật đặt ra cho phần backend Python và tạo nền chắc để tiếp tục nâng cấp lên mức production trong các giai đoạn tiếp theo.
+
+---
+
+## 8. Phụ lục (gợi ý trình bày khi đưa vào Word)
+
+Để đảm bảo báo cáo <= 10 trang:
+1. Font: Times New Roman, cỡ 13.
+2. Line spacing: 1.3 hoặc 1.5.
+3. Lề chuẩn A4 (trên 2 cm, dưới 2 cm, trái 3 cm, phải 2 cm).
+4. Giữ nguyên các mục chính từ 1 đến 7.
+5. Nếu cần rút ngắn thêm, giảm phần 5.2 xuống dạng bullet ngắn.
