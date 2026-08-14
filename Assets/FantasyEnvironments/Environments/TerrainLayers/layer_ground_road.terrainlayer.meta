@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 44c91ff670f3f3a4baa73d3d6b595aa3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/TerrainLayers/layer_ground_road.terrainlayer
+  uploadId: 647578

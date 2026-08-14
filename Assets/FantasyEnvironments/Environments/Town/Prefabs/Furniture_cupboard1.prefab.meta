@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b5c3592c56825e9468618db93beb96d7
+labels:
+- Prop
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/Furniture_cupboard1.prefab
+  uploadId: 647578

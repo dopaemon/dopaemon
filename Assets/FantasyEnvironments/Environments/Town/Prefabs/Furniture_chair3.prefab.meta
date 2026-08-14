@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: cecfc534c2fbbe44f9042b26f8ccb565
+labels:
+- Prop
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/Furniture_chair3.prefab
+  uploadId: 647578

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ec98e7d8c9e19ac469448b6654f0a782
+labels:
+- Prop
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/Furniture_elixir2.prefab
+  uploadId: 647578

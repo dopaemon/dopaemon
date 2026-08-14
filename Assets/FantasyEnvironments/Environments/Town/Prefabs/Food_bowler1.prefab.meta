@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 670d3848d1d5d804b89f6cb7e02d3856
+labels:
+- Prop
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/Food_bowler1.prefab
+  uploadId: 647578

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6030d4ecea42c4a4a8df94e0e7854f90
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/TerrainLayers/layer_ground_grass.terrainlayer
+  uploadId: 647578

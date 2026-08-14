@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: aa91054e6f5bee946ba66c9a32a3a5b9
+labels:
+- Architecture
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/House2.prefab
+  uploadId: 647578

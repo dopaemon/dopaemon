@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 12c2885c9d0abc6419d8f0e715bf925a
+labels:
+- Prop
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/Food_chicken.prefab
+  uploadId: 647578

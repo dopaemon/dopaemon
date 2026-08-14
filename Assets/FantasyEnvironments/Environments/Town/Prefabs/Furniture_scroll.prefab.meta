@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 77869ebfddd0f8047b4860ea9e5f241e
+labels:
+- Prop
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/Furniture_scroll.prefab
+  uploadId: 647578

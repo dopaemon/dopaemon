@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 731e3b5ac8d62b84e9132f24ac2deff4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/TerrainLayers/layer_ground_stones.terrainlayer
+  uploadId: 647578

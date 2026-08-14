@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2df1224228c2d384b87b78ed80cca5fc
+timeCreated: 1505328199
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Materials/Wall1.mat
+  uploadId: 647578
