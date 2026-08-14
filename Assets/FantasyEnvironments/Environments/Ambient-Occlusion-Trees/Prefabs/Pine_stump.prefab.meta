@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ed5f82224b99b30438c4330a2dca3429
+labels:
+- Terrain
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/Prefabs/Pine_stump.prefab
+  uploadId: 647578

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b09e7c2aeb26bb84cbfa0586ec3c5bbb
+timeCreated: 1499778432
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/Materials/Pine_leaves.mat
+  uploadId: 647578

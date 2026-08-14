@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c07f24e35f07ce74ba43afa35d48adf7
+labels:
+- Terrain
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Prefabs/Rock1.prefab
+  uploadId: 647578

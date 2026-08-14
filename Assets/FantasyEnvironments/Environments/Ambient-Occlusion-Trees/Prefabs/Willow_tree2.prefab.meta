@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1499c673ad068e74e90b288302fa8b6b
+labels:
+- Terrain
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/Prefabs/Willow_tree2.prefab
+  uploadId: 647578

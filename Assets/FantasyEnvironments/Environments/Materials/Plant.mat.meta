@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7805f02cde847fa488989988fbc3d7eb
+timeCreated: 1498477485
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Materials/Plant.mat
+  uploadId: 647578

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d3ad70c162b894b41bcc1221fac9a976
+timeCreated: 1499342346
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Ambient-Occlusion-Trees/Materials/Willow_bark.mat
+  uploadId: 647578
