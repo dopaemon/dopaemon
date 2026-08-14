@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 717bc8f73d5aea64caef02a0c07b1e3a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 35361
+  packageName: Fantasy Forest Environment - Free Demo
+  packageVersion: 2.0
+  assetPath: Assets/Fantasy Forest Environment Free Sample/StandardNoCulling.shader
+  uploadId: 321497
