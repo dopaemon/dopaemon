@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 11f39b2ab10a2184d84e62f1906a4a05
+timeCreated: 1548247362
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138709
+  packageName: White Rabbit
+  packageVersion: 1.0
+  assetPath: Assets/Rabbits/Materials/Rabbit1.mat
+  uploadId: 291714

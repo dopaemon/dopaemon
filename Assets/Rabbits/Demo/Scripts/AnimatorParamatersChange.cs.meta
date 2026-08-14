@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: c00a3e4d8a561f544b1a109c355ffc44
+timeCreated: 1548506565
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138709
+  packageName: White Rabbit
+  packageVersion: 1.0
+  assetPath: Assets/Rabbits/Demo/Scripts/AnimatorParamatersChange.cs
+  uploadId: 291714

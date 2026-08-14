@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3f9dcd6bf73fe2f40806fb0074f456c4
+timeCreated: 1548506584
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 138709
+  packageName: White Rabbit
+  packageVersion: 1.0
+  assetPath: Assets/Rabbits/Demo/Prefabs/Demo White Rabbit.prefab
+  uploadId: 291714
