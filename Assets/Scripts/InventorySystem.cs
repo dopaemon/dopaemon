@@ -105,6 +105,12 @@ public class InventorySystem : MonoBehaviour
         itemToAdd.transform.localPosition = Vector3.zero;
         itemToAdd.transform.localRotation = Quaternion.identity;
         itemToAdd.transform.localScale = Vector3.one;
+        InventoryItem inventoryItem = itemToAdd.GetComponent<InventoryItem>();
+        if (inventoryItem != null)
+        {
+            inventoryItem.itemName = itemName;
+        }
+
         itemList.Add(itemName);
         CheckIfFull();
         return true;
@@ -129,8 +135,62 @@ public class InventorySystem : MonoBehaviour
     {
         isOpen = open;
         inventoryScreenUI.SetActive(open);
-        Cursor.lockState = open ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = open;
+
+        bool craftingOpen = CraftingSystem.Instance != null && CraftingSystem.Instance.isOpen;
+        Cursor.lockState = open || craftingOpen ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = open || craftingOpen;
+    }
+
+    public int GetItemCount(string itemName)
+    {
+        RecalculateList();
+        return itemList.FindAll(item => item == itemName).Count;
+    }
+
+    public bool RemoveItem(string itemName, int amount)
+    {
+        if (amount <= 0 || GetItemCount(itemName) < amount)
+        {
+            return false;
+        }
+
+        int removed = 0;
+        for (int slotIndex = slotList.Count - 1; slotIndex >= 0 && removed < amount; slotIndex--)
+        {
+            Transform slot = slotList[slotIndex].transform;
+            if (slot.childCount == 0 || NormalizeItemName(slot.GetChild(0).gameObject) != itemName)
+            {
+                continue;
+            }
+
+            Destroy(slot.GetChild(0).gameObject);
+            removed++;
+        }
+
+        return removed == amount;
+    }
+
+    public void RecalculateList()
+    {
+        itemList.Clear();
+
+        foreach (GameObject slot in slotList)
+        {
+            if (slot.transform.childCount > 0)
+            {
+                itemList.Add(NormalizeItemName(slot.transform.GetChild(0).gameObject));
+            }
+        }
+
+        CheckIfFull();
+    }
+
+    string NormalizeItemName(GameObject item)
+    {
+        InventoryItem inventoryItem = item.GetComponent<InventoryItem>();
+        return inventoryItem != null && !string.IsNullOrEmpty(inventoryItem.itemName)
+            ? inventoryItem.itemName
+            : item.name.Replace("(Clone)", string.Empty).Trim();
     }
 
 

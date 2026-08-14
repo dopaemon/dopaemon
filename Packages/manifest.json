@@ -48,6 +48,27 @@
     "com.unity.modules.vehicles": "1.0.0",
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
-  }
+    "com.unity.modules.xr": "1.0.0",
+    "com.ivanmurzak.unity.mcp": "0.87.0",
+    "com.ivanmurzak.unity.mcp.inputsystem": "1.0.16",
+    "com.ivanmurzak.unity.mcp.navigation": "1.0.16",
+    "com.ivanmurzak.unity.mcp.cinemachine": "1.0.16",
+    "com.ivanmurzak.unity.mcp.animation": "1.2.31",
+    "com.ivanmurzak.unity.mcp.particlesystem": "1.2.30",
+    "com.ivanmurzak.unity.mcp.timeline": "1.0.16",
+    "com.ivanmurzak.unity.mcp.splines": "1.0.15",
+    "com.ivanmurzak.unity.mcp.probuilder": "1.2.30",
+    "com.ivanmurzak.unity.mcp.terrain": "1.0.16",
+    "com.ivanmurzak.unity.mcp.tilemap": "1.0.15"
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.ivanmurzak",
+        "extensions.unity"
+      ]
+    }
+  ]
 }

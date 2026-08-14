@@ -29,8 +29,10 @@ public class PlayerMovement : MonoBehaviour
 			velocity.y = -2f;
 		}
 
-		float x = Input.GetAxis("Horizontal");
-		float z = Input.GetAxis("Vertical");
+		bool inputLocked = (InventorySystem.Instance != null && InventorySystem.Instance.isOpen) ||
+			(CraftingSystem.Instance != null && CraftingSystem.Instance.isOpen);
+		float x = inputLocked ? 0f : Input.GetAxis("Horizontal");
+		float z = inputLocked ? 0f : Input.GetAxis("Vertical");
 
 		//right is the red Axis, foward is the blue axis
 		Vector3 move = transform.right * x + transform.forward * z;
@@ -38,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 		controller.Move(move * speed * Time.deltaTime);
 
 		//check if the player is on the ground so he can jump
-		if (Input.GetButtonDown("Jump") && isGrounded)
+		if (!inputLocked && Input.GetButtonDown("Jump") && isGrounded)
 		{
 			//the equation for jumping
 			velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);

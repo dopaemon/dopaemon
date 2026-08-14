@@ -8,10 +8,10 @@ public class SelectionManager : MonoBehaviour
 {
     public static SelectionManager Instance { get; private set; }
     public bool onTarget { get; private set; }
+    public GameObject selectedObject { get; private set; }
  
     public GameObject interaction_info_ui;
     TMP_Text interaction_text;
-    InteractableObject currentTarget;
  
     private void Start()
     {
@@ -30,7 +30,7 @@ public class SelectionManager : MonoBehaviour
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         RaycastHit hit;
         onTarget = false;
-        currentTarget = null;
+        selectedObject = null;
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
         {
@@ -39,7 +39,7 @@ public class SelectionManager : MonoBehaviour
             if (interactableObject != null && interactableObject.IsInRange(hit.distance))
             {
                 onTarget = true;
-                currentTarget = interactableObject;
+                selectedObject = interactableObject.gameObject;
                 interaction_text.text = interactableObject.CanBePickedUp
                     ? $"{interactableObject.GetItemName()} - Chuột trái để nhặt"
                     : interactableObject.GetItemName();
@@ -61,7 +61,7 @@ public class SelectionManager : MonoBehaviour
 
 public bool IsTarget(InteractableObject interactableObject)
     {
-        return onTarget && currentTarget == interactableObject;
+        return onTarget && selectedObject == interactableObject.gameObject;
     }
 
 public bool AddToInventory(string itemName, int quantity)
