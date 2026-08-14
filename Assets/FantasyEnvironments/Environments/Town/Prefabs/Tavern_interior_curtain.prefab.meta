@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 223538b123a3d5a4ca03eeb7ae26c113
+labels:
+- Tavern
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/Tavern_interior_curtain.prefab
+  uploadId: 647578

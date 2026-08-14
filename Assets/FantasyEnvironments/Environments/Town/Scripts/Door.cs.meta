@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3c572774c6a023847b60b7698271e6ff
+timeCreated: 1506357910
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Scripts/Door.cs
+  uploadId: 647578

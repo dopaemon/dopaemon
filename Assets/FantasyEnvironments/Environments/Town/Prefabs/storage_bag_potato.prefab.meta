@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 0583e822e5012574482d44a792a86ec7
+labels:
+- Prop
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/storage_bag_potato.prefab
+  uploadId: 647578

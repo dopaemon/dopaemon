@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 254d02d9b62c2ec4a82af8ba4cfd9c9e
+labels:
+- Architecture
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/WoodenWall_GateL.prefab
+  uploadId: 647578

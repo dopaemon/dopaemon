@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0edbfd697bd8266428ec1d0eddf36e5f
+labels:
+- Prop
+- Vehicle
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 103573
+  packageName: Fantasy landscape
+  packageVersion: 2.0
+  assetPath: Assets/FantasyEnvironments/Environments/Town/Prefabs/cart4.prefab
+  uploadId: 647578
