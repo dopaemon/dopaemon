@@ -39,4 +39,4 @@ func main() {
 -->
 
 ## Nếu Bạn Muốn Liên Lạc Với Tôi:
-[<img src="https://www.vectorlogo.zone/logos/telegram/telegram-tile.svg" width="32">](http://t.me/kernelpanix)
+[<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">](mailto:example@email.com)
