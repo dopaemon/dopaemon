@@ -1,6 +1,8 @@
 # README.md
 ## Hi. Tôi là ```Trần Nguyễn Tuấn Anh```
 
+[![Top Committer](https://api.star-history.com/badge?user=dopaemon&year=2026)](https://www.star-history.com/dopaemon)
+
 ![](https://github.com/dopaemon/dopaemon/raw/output/dist/github-contribution-grid-snake.svg)
 <!-- ![svg](https://raw.githubusercontent.com/dopaemon/dopaemon/07b036fc965569846759539e9d4f81472576fbec/profile-3d-contrib/profile-night-view.svg) -->
 ```Go
