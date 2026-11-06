@@ -3,20 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
- 
+using UnityEngine.UI;
+
 public class SelectionManager : MonoBehaviour
 {
     public static SelectionManager Instance { get; private set; }
     public bool onTarget { get; private set; }
     public GameObject selectedObject { get; private set; }
- 
+
     public GameObject interaction_info_ui;
     TMP_Text interaction_text;
- 
+
+    public Image centerDotImage;
+    public Image handIcon;
+
     private void Start()
     {
         interaction_text = interaction_info_ui.GetComponent<TMP_Text>();
         interaction_info_ui.SetActive(false);
+        SetHandIcon(false);
+    }
+
+    void SetHandIcon(bool visible)
+    {
+        if (centerDotImage != null) centerDotImage.gameObject.SetActive(!visible);
+        if (handIcon != null) handIcon.gameObject.SetActive(visible);
     }
  
     void Update()
@@ -45,16 +56,20 @@ public class SelectionManager : MonoBehaviour
                     : interactableObject.GetItemName();
                 interaction_info_ui.SetActive(true);
 
+                // Show the hand icon only for items that can be picked up
+                SetHandIcon(interactableObject.CompareTag("pickable"));
             }
-            else 
-            { 
+            else
+            {
                 interaction_info_ui.SetActive(false);
+                SetHandIcon(false);
             }
 
         }
         else
         {
             interaction_info_ui.SetActive(false);
+            SetHandIcon(false);
         }
     }
 

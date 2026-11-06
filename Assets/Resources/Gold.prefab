@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9145909676321691007}
   - component: {fileID: 4652063023363340051}
   - component: {fileID: 1502606961924482907}
+  - component: {fileID: 9185480710986673883}
   m_Layer: 5
   m_Name: Gold
   m_TagString: Untagged
@@ -101,3 +102,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8c77b219da04bdcb43e4c0514e9402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &9185480710986673883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7128614100076145162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a4e2e02d92a4d20a18c1de470651aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
+  itemName: Gold
+  isTrashable: 0
+  thisName: Gold
+  thisDescription: A handful of gold
+  thisFunctionality: Used for crafting
+  isConsumable: 0
+  healthEffect: 0
+  caloriesEffect: 0
+  hydrationEffect: 0
