@@ -115,3 +115,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   itemName: Axe
+  isTrashable: 1
+  thisName: Axe
+  thisDescription: A sharp tool
+  thisFunctionality: Used to chop down trees
+  isConsumable: 0
+  healthEffect: 0
+  caloriesEffect: 0
+  hydrationEffect: 0

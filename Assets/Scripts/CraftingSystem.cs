@@ -110,11 +110,6 @@ public class CraftingSystem : MonoBehaviour
         {
             Toggle();
         }
-
-        if (isOpen && toolsScreenUI.activeSelf)
-        {
-            RefreshRequirements();
-        }
     }
 
     public void Toggle()
@@ -139,7 +134,7 @@ public class CraftingSystem : MonoBehaviour
     {
         craftingScreenUI.SetActive(false);
         toolsScreenUI.SetActive(true);
-        RefreshRequirements();
+        RefreshNeededItems();
     }
 
     public void Close()
@@ -162,8 +157,13 @@ public class CraftingSystem : MonoBehaviour
         Cursor.visible = true;
     }
 
-    void RefreshRequirements()
+    public void RefreshNeededItems()
     {
+        if (goldRequirementText == null || stickRequirementText == null || craftAxeButton == null)
+        {
+            return;
+        }
+
         int goldCount = GetItemCount(AxeBlueprint.firstRequirement);
         int stickCount = GetItemCount(AxeBlueprint.secondRequirement);
         goldRequirementText.text = $"Gold: {goldCount}/{AxeBlueprint.firstAmount}";
@@ -186,7 +186,7 @@ public class CraftingSystem : MonoBehaviour
         if (GetItemCount(blueprint.firstRequirement) < blueprint.firstAmount ||
             GetItemCount(blueprint.secondRequirement) < blueprint.secondAmount)
         {
-            RefreshRequirements();
+            RefreshNeededItems();
             return;
         }
 
@@ -203,7 +203,7 @@ public class CraftingSystem : MonoBehaviour
 
     IEnumerator FinishCraft(Blueprint blueprint)
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return 0;
 
         InventorySystem inventory = InventorySystem.Instance;
         inventory.RecalculateList();
@@ -212,6 +212,6 @@ public class CraftingSystem : MonoBehaviour
             Debug.LogError($"Crafted item prefab not found: Resources/{blueprint.itemName}");
         }
 
-        RefreshRequirements();
+        RefreshNeededItems();
     }
 }
