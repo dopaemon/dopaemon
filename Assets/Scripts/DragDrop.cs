@@ -6,6 +6,8 @@ using UnityEngine.UI;
  
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public static GameObject itemBeingDragged;
+
     Canvas rootCanvas;
     CanvasGroup canvasGroup;
     Transform originalParent;
@@ -41,6 +43,7 @@ public void OnBeginDrag(PointerEventData eventData)
             return;
         }
 
+        itemBeingDragged = gameObject;
         originalParent = transform.parent;
         transform.SetParent(rootCanvas.transform, true);
         transform.SetAsLastSibling();
@@ -59,6 +62,7 @@ public void OnDrag(PointerEventData eventData)
 
 public void OnEndDrag(PointerEventData eventData)
     {
+        itemBeingDragged = null;
         CacheReferences();
         if (canvasGroup == null)
         {

@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
- 
+using UnityEngine.UI;
+
 public class InventorySystem : MonoBehaviour
 {
     public static InventorySystem Instance { get; private set; }
@@ -12,6 +14,13 @@ public class InventorySystem : MonoBehaviour
     public GameObject inventoryScreenUI;
     public bool isFull;
     public bool isOpen { get; private set; }
+
+    public GameObject ItemInfoUI;
+
+    // Pickup Popup
+    public GameObject pickupAlert;
+    public TMP_Text pickupName;
+    public Image pickupImage;
 
     GameObject itemToAdd;
     GameObject slotToEquip;
@@ -111,9 +120,37 @@ public class InventorySystem : MonoBehaviour
             inventoryItem.itemName = itemName;
         }
 
-        itemList.Add(itemName);
-        CheckIfFull();
+        TriggerPickupPopUp(itemName, itemToAdd.GetComponent<Image>().sprite);
+
+        RecalculateList();
+        RefreshCraftingItems();
         return true;
+    }
+
+    void TriggerPickupPopUp(string itemName, Sprite itemSprite)
+    {
+        if (pickupAlert == null)
+        {
+            return;
+        }
+
+        pickupAlert.SetActive(true);
+        pickupName.text = itemName;
+        pickupImage.sprite = itemSprite;
+    }
+
+    void RefreshCraftingItems()
+    {
+        if (CraftingSystem.Instance != null)
+        {
+            CraftingSystem.Instance.RefreshNeededItems();
+        }
+    }
+
+    // DestroyImmediate so the lists recalculated right after see the item is gone
+    void DestroyItem(GameObject item)
+    {
+        DestroyImmediate(item);
     }
 
     public bool HasSpace(int quantity = 1)
@@ -163,10 +200,12 @@ public class InventorySystem : MonoBehaviour
                 continue;
             }
 
-            Destroy(slot.GetChild(0).gameObject);
+            DestroyItem(slot.GetChild(0).gameObject);
             removed++;
         }
 
+        RecalculateList();
+        RefreshCraftingItems();
         return removed == amount;
     }
 
@@ -191,31 +230,5 @@ public class InventorySystem : MonoBehaviour
         return inventoryItem != null && !string.IsNullOrEmpty(inventoryItem.itemName)
             ? inventoryItem.itemName
             : item.name.Replace("(Clone)", string.Empty).Trim();
-    }
-
-
-public bool DropItem(string itemName, GameObject inventoryItem)
-    {
-        GameObject worldPrefab = Resources.Load<GameObject>("WorldItems/" + itemName);
-        Camera playerCamera = Camera.main;
-
-        if (worldPrefab == null || playerCamera == null || inventoryItem == null)
-        {
-            Debug.LogError($"World item prefab not found: Resources/WorldItems/{itemName}");
-            return false;
-        }
-
-        Vector3 dropPosition = playerCamera.transform.position + playerCamera.transform.forward * 2f;
-        if (Physics.Raycast(dropPosition + Vector3.up * 5f, Vector3.down, out RaycastHit hit, 20f,
-            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
-        {
-            dropPosition.y = hit.point.y + 0.03f;
-        }
-
-        Instantiate(worldPrefab, dropPosition, Quaternion.Euler(0f, playerCamera.transform.eulerAngles.y, 0f));
-        itemList.Remove(itemName);
-        Destroy(inventoryItem);
-        CheckIfFull();
-        return true;
     }
 }
